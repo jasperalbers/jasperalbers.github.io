@@ -1045,10 +1045,12 @@ main {
 }
 
 .blog-banner-box {
-  width: 100%;
+  width: 94%;
   height: 200px;
   border-radius: 12px;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .blog-banner-box img {
@@ -1490,7 +1492,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * #PORTFOLIO, BLOG
    */
 
-  .project-img, .blog-banner-box { border-radius: 16px; }
+  .project-img, .blog-banner-box { border-radius: 8px; }
 
   .blog-posts-list { gap: 30px; }
 
