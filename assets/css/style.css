@@ -74,7 +74,7 @@
    */
 
   /* font-family */
-  --ff-poppins: 'Poppins', sans-serif;
+  --ff-poppins: 'Avenir', sans-serif;
 
   /* font-size */
   --fs-1: 24px;
@@ -1076,6 +1076,7 @@ main {
   color: var(--light-gray-70);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
+  text-align: center;
 }
 
 .blog-meta .dot {
