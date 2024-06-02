@@ -17,6 +17,7 @@
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "prettier": "^2.8.8"
   },
   "keywords": [
@@ -38,5 +39,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "scripts": {
+    "deploy": "gatsby build && gh-pages -d public -b colorful"
   }
 }
