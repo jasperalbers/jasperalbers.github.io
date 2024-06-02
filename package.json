@@ -41,6 +41,6 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "scripts": {
-    "deploy": "gatsby build && gh-pages -d public -b colorful"
+    "deploy": "gatsby build && gh-pages -d public -b main"
   }
 }
