@@ -13,7 +13,7 @@ module.exports = {
         description: `Personal webpage of Jasper Albers`,
         keywords: `Jasper Albers, website, personal page, cv, resume, publications, portfolio, social media, scholar, mastodon, mail, email, linkedin, github`,
         author: `@jasperalbers`,
-        siteUrl: `jasperalbers.github.io`,
+        siteUrl: `https://jasperalbers.github.io`,
     },
     plugins: [
         `gatsby-plugin-image`,
