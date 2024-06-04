@@ -11,8 +11,9 @@ module.exports = {
     siteMetadata: {
         title: `Jasper Albers`,
         description: `Personal webpage of Jasper Albers`,
-        author: `@gatsbyjs`,
-        siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+        keywords: `Jasper Albers, website, personal page, cv, resume, publications, portfolio, social media, scholar, mastodon, mail, email, linkedin, github`,
+        author: `@jasperalbers`,
+        siteUrl: `jasperalbers.github.io`,
     },
     plugins: [
         `gatsby-plugin-image`,
