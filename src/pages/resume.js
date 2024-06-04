@@ -8,7 +8,7 @@ import BulletPoint from "../components/BulletPoint"
 import data from '../../data.json'
 
 const ResumePage = () => (
-  <Layout>
+    <Layout>
     <div className="Hero">
       <div className="HeroGroup">
         <h1>Résumé</h1>

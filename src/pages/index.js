@@ -13,7 +13,7 @@ import mastodon from '../images/mastodon.svg'
 import data from '../../data.json'
 
 const IndexPage = () => (
-  <Layout>
+    <Layout>
     <div className="Hero">
       <div className="HeroGroup">
         <h1>👋🏼 Hi, I'm Jasper.</h1>

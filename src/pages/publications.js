@@ -9,7 +9,7 @@ import CardPublication from "../components/CardPublication"
 import data from '../../data.json'
 
 const PublicationsPage = () => (
-  <Layout>
+    <Layout>
     <div className="Hero">
       <div className="HeroGroup">
         <h1>Publications</h1>

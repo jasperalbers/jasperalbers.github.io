@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import './Card.css';
 
-const CardImage = styled.div`
+const CardImage = styled.div `
     width: 100%; /* Adjust as needed */
     height: 45%; /* Adjust as needed */
     padding: 10px; /* Add padding if necessary */

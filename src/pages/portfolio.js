@@ -8,7 +8,7 @@ import CardPortfolio from "../components/CardPortfolio"
 import data from '../../data.json'
 
 const PortfolioPage = () => (
-  <Layout>
+    <Layout>
     <div className="Hero">
       <div className="HeroGroup">
         <h1>Portfolio</h1>

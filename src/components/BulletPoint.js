@@ -6,10 +6,10 @@ const BulletPoint = props => {
     const formatText = text => {
         const parts = text.split(':');
         if (parts.length > 1) {
-            return (
-                <>
-                    <span className="bold-text">{parts[0]}</span>: {parts.slice(1).join(':')}
-                </>
+            return ( <
+                >
+                <span className="bold-text">{parts[0]}</span>: { parts.slice(1).join(':') } <
+                />
             );
         }
         return text;
@@ -17,12 +17,12 @@ const BulletPoint = props => {
 
     return (
         <div className="BulletPoint">
-        	<ul>
-	            <li>
-	     			<heading>{props.title}</heading>
-	     			<br></br>
-	      			<time>{props.time}</time>
-	      			<p>
+            <ul>
+                <li>
+                    <heading>{props.title}</heading>
+                    <br></br>
+                    <time>{props.time}</time>
+                    <p>
                         {props.grade && (
                             <>
                                 {formatText(props.grade)}
@@ -47,11 +47,11 @@ const BulletPoint = props => {
                                 <br />
                             </>
                         )}
-	      			</p>
-	        		<p><i>{props.place}</i></p>
-	    		</li>
-    		</ul>
-    		<br></br>
+                    </p>
+                    <p><i>{props.place}</i></p>
+                </li>
+            </ul>
+            <br></br>
         </div>
     );
 };
