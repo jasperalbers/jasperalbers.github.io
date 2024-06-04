@@ -24,7 +24,7 @@ function Seo({ description, title, children }) {
     )
 
     const metaDescription = description || site.siteMetadata.description
-    const defaultTitle = site.siteMetadata ? .title
+    const defaultTitle = site.siteMetadata ?.title
 
     return ( <
         >
@@ -42,15 +42,15 @@ function Seo({ description, title, children }) {
         content = "website" / >
         <meta name="twitter:card" content="summary" /> <
         meta name = "twitter:creator"
-        content = { site.siteMetadata ? .author || `` }
+        content = { site.siteMetadata ?.author || `` }
         /> <
         meta name = "twitter:title"
         content = { title }
         /> <
         meta name = "twitter:description"
         content = { metaDescription }
-        /> { children } <
-        />
+        /> { children } < /
+        >
     )
 }
 
