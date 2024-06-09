@@ -47,6 +47,8 @@ export const TextWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
 
   > * {
     opacity: 0;

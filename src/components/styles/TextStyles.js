@@ -10,6 +10,9 @@ export const H1 = styled.h1`
   @media (max-width: 500px) {
     font-size: 42px;
   }
+    @media (max-width: 400px) {
+    font-size: 35px;
+  }
   @media (prefers-color-scheme: dark) {
     color: ${themes.dark.text1};
   }
@@ -24,7 +27,9 @@ export const H2 = styled.h2`
   @media (max-width: 500px) {
     font-size: 28px;
   }
-
+    @media (max-width: 400px) {
+    font-size: 24px;
+  }
   @media (prefers-color-scheme: dark) {
     color: ${themes.dark.text2};
   }
@@ -46,6 +51,9 @@ export const H4 = styled.h4`
   font-size: 20px;
   @media (max-width: 600px) {
     font-size: 17px;
+  }
+    @media (max-width: 400px) {
+    font-size: 14px;
   }
   @media (prefers-color-scheme: dark) {
     color: ${themes.dark.text1};

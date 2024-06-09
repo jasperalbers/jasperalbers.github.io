@@ -90,6 +90,11 @@ const CardL = styled(Card)`
     width: 300px;
     height: 200px;
   }
+
+  @media (max-width: 400px) {
+    width: 250px;
+    height: 200px;
+  }
 `;
 
 const CardH = styled(Card)`
@@ -104,6 +109,14 @@ const CardH = styled(Card)`
     gap: 20px;
     grid-template-rows: 20% 60% 10%;
   }
+
+  @media (max-width: 400px) {
+    width: 250px;
+    height: 200px;
+    gap: 20px;
+    grid-template-rows: 20% 50% 10%;
+  }
+
 `;
 
 const CardImage = styled.img`
