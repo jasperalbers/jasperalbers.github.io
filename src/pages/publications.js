@@ -1,39 +1,37 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import HeroSection from "../components/sections/HeroSection";
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import Card from "../components/Card"
-import CardPublication from "../components/CardPublication"
+import Layout from "../components/layout/layout";
+import Seo from "../components/layout/seo";
+import { CardPublication, WrapperH } from "../components/elements/Card";
 
-import data from '../../data.json'
+import data from "../data/publications.json";
 
-const PublicationsPage = () => (
+function PublicationsPage() {
+  return (
     <Layout>
-    <div className="Hero">
-      <div className="HeroGroup">
-        <h1>Publications</h1>
-        <p>Check out my publications below. All articles are freely available and either peer-reviewed or under review.</p>
-      </div>
-    </div>
-    <div className="Cards">
-        <div className="CardGroupH">
-            {data.publications.map((paper) => {
-                return (
-                    <CardPublication
-                        title={paper.title}
-                        journal={paper.journal}
-                        image={paper.image}
-                        date={paper.date}
-                        link={paper.link}
-                    />
-                );
-            })}
-        </div>
-    </div>
-  </Layout>
-)
+      <HeroSection
+        title="Publications"
+        description="Check out my publications below. All articles are freely available
+            and either peer-reviewed or under review."
+      />
+      <WrapperH>
+        {data.publications.map((paper) => {
+          return (
+            <CardPublication
+              title={paper.title}
+              journal={paper.journal}
+              image={paper.image}
+              date={paper.date}
+              link={paper.link}
+            />
+          );
+        })}
+      </WrapperH>
+    </Layout>
+  );
+}
 
-export const Head = () => <Seo title="Publications" />
+export const Head = () => <Seo title="Publications" />;
 
-export default PublicationsPage
+export default PublicationsPage;
