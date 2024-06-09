@@ -39,6 +39,7 @@ const HeaderContainer = styled.div`
   padding: 10px 0;
   z-index: 100;
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  -webkit-backdrop-filter: ${(props) => (props.hasScrolled ? "blur(10px)" : "none")};
   backdrop-filter: ${(props) => (props.hasScrolled ? "blur(10px)" : "none")};
   box-shadow: ${(props) =>
     props.hasScrolled ? "0 1px 20px rgba(0, 0, 0, 0.25)" : "none"};

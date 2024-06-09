@@ -89,12 +89,14 @@ const Resume = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 50px 0 50px 0;
-  height: 1900px;
+  margin: 50px 0;
+  gap: 30px;
+  max-height: 3000px;
 
-  @media (max-width: 1200px) {
-    height: 100%;
+  @media (max-width: 1250px) {
+    max-height: 100%;
   }
+
 `;
 
 const ResumeSection = styled.div`
