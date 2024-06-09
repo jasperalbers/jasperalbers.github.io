@@ -83,20 +83,18 @@ export function SocialMediaItem(props) {
   return (
     <Link to={props.link}>
       {" "}
-      <SocialMediaIcon src={props.image} alt={props.alt} width="40" imageDark={props.imageDark}/>{" "}
+      <SocialMediaIcon
+        src={props.image}
+        alt={props.alt}
+        width="40"
+        imageDark={props.imageDark}
+      />{" "}
     </Link>
   );
 }
 
-const getImageUrl = (props) => {
-  if (props.imageDark) {
-    return props.imageDark;
-  }
-  return props.image;
-};
-
 const SocialMediaIcon = styled.img`
   @media (prefers-color-scheme: dark) {
-    content: url(${props => getImageUrl(props)});
+    content: url(${(props) => props.imageDark});
   }
 `;

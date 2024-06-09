@@ -3,6 +3,7 @@
     {
       "alt": "mail",
       "image": "/images/icons/mail.png",
+      "imageDark": "/images/icons/mail.png",
       "link": "mailto:jasperalbers@posteo.de"
     },
     {
@@ -14,16 +15,19 @@
     {
       "alt": "linkedin",
       "image": "/images/icons/linkedin.png",
+      "imageDark": "/images/icons/linkedin.png",
       "link": "https://www.linkedin.com/in/jasper-albers/"
     },
     {
       "alt": "scholar",
       "image": "/images/icons/scholar.svg",
+      "imageDark": "/images/icons/scholar.svg",
       "link": "https://scholar.google.com/citations?user=RZqyxSQAAAAJ&hl=en"
     },
     {
       "alt": "mastodon",
       "image": "/images/icons/mastodon.svg",
+      "imageDark": "/images/icons/mastodon.svg",
       "link": "https://toot.io/@jasperalbers"
     }
   ]
