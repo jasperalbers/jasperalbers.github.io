@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { BodyMain, MediumText, H4 } from "../styles/TextStyles";
+import { themes } from "../styles/ColorStyles"
 
 export default function BulletPoint(props) {
   const formatText = (text) => {
@@ -18,11 +20,10 @@ export default function BulletPoint(props) {
   return (
     <Wrapper>
       <ul>
-        <li>
-          <heading>{props.title}</heading>
-          <br></br>
+        <Li>
+          <H4>{props.title}</H4>
           <Time>{props.time}</Time>
-          <p>
+          <MediumText>
             {props.grade && (
               <>
                 {formatText(props.grade)}
@@ -47,11 +48,11 @@ export default function BulletPoint(props) {
                 <br />
               </>
             )}
-          </p>
-          <p>
+          </MediumText>
+          <MediumText>
             <i>{props.place}</i>
-          </p>
-        </li>
+          </MediumText>
+        </Li>
       </ul>
       <br></br>
     </Wrapper>
@@ -79,4 +80,12 @@ const Heading = styled.div`
 const Wrapper = styled.div`
 p .bold-text {
     font-weight: bold;
+`;
+
+const Li = styled.li`
+  color: black;
+
+  @media (prefers-color-scheme: dark) {
+    color: white;
+  }
 `;

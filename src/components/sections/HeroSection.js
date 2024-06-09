@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "gatsby";
 import styled, { keyframes } from "styled-components";
 import { H1, H2, BodyMain } from "../styles/TextStyles";
-import WaveBackground from "../backgrounds/WaveBackground"
+import WaveBackground from "../backgrounds/WaveBackground";
 
 export default function HeroSection(props) {
   return (
@@ -17,14 +18,10 @@ export default function HeroSection(props) {
 }
 
 const Wrapper = styled.div`
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 150px 50px;
-  text-align: center;
-
-  @media (max-width: 540px) {
-    padding: 100px, 20px;
-  }
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
 `;
 
 const animation = keyframes`
@@ -39,25 +36,67 @@ const animation = keyframes`
     }
 `;
 
-const TextWrapper = styled.div`
-  a:hover {
-    transform: translateY(-4px);
-  }
+export const TextWrapper = styled.div`
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  padding: 100px 50px;
+  max-width: 600px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
   > * {
     opacity: 0;
     animation: ${animation} 3s 0.1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   }
-`;
 
+  @media (max-width: 500px) {
+    padding: 135px 50px;
+  }
+`;
 
 export const SocialMedia = styled(Wrapper)`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 30px;
   justify-items: center;
+  max-height: 60px;
+  padding: 20px;
+
+  a {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  a:hover {
+    transform: translateY(-4px);
+  }
 
   @media (max-width: 550px) {
     grid-gap: 10px;
   }
 `;
 
+export function SocialMediaItem(props) {
+  return (
+    <Link to={props.link}>
+      {" "}
+      <SocialMediaIcon src={props.image} alt={props.alt} width="40" imageDark={props.imageDark}/>{" "}
+    </Link>
+  );
+}
+
+const getImageUrl = (props) => {
+  if (props.imageDark) {
+    return props.imageDark;
+  }
+  return props.image;
+};
+
+const SocialMediaIcon = styled.img`
+  @media (prefers-color-scheme: dark) {
+    content: url(${props => getImageUrl(props)});
+  }
+`;

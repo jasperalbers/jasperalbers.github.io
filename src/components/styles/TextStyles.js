@@ -1,32 +1,54 @@
 import styled from "styled-components";
+import { themes } from "./ColorStyles";
 
 export const H1 = styled.h1`
   margin: 0;
   color: black;
-  font-size: 60px;
+  font-size: 50px;
   line-height: 1.2;
 
-  @media (max-width: 540px) {
-    font-size: 50px;
+  @media (max-width: 500px) {
+    font-size: 42px;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: ${themes.dark.text1};
   }
 `;
 
 export const H2 = styled.h2`
   margin: 0;
   color: rgba(0, 0, 0, 0.6);
-  font-size: 40px;
+  font-size: 32px;
   line-height: 1.2;
 
-  @media (max-width: 540px) {
-    font-size: 30px;
+  @media (max-width: 500px) {
+    font-size: 28px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: ${themes.dark.text2};
   }
 `;
 
 export const H3 = styled.h3`
   font-weight: bold;
   font-size: 30px;
-  @media (max-width: 450px) {
+  @media (max-width: 600px) {
     font-size: 24px;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: ${themes.dark.text1};
+  }
+`;
+
+export const H4 = styled.h4`
+  font-weight: bold;
+  font-size: 20px;
+  @media (max-width: 600px) {
+    font-size: 17px;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: ${themes.dark.text1};
   }
 `;
 
@@ -41,15 +63,25 @@ export const BodyMain = styled.p`
   font-size: 20px;
   line-height: 1.5;
 
-  @media (max-width: 540px) {
+  @media (max-width: 500px) {
     font-size: 17px;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: ${themes.dark.text1};
   }
 `;
 
 export const MediumText = styled.p`
   font-weight: normal;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 130%;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: ${themes.dark.text1};
+  }
 `;
 
 export const Caption = styled.p`

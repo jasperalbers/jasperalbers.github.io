@@ -48,11 +48,6 @@ const HeaderContainer = styled.div`
     font-weight: 700;
   }
 
-  // &.HeaderScrolled {
-  //   backdrop-filter: blur(10px);
-  //   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
-  // }
-
   @media (max-width: 640px) {
     font-size: 18px;
   }
@@ -75,8 +70,8 @@ const HeaderGroup = styled.div`
     width: auto;
   }
 
-  @media (max-width: 640px) {
-    grid-template-columns: repeat(2, auto);
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     justify-items: center;
     align-items: center;
@@ -99,6 +94,12 @@ const HeaderButton = styled.button`
   &:hover {
     transform: translateY(-4px);
   }
+
+  @media (max-width: 640px) {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
 `;
 
 const buttons = [

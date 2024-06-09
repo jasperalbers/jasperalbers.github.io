@@ -5,7 +5,7 @@ import HeroSection from "../components/sections/HeroSection";
 import Layout from "../components/layout/layout";
 import Seo from "../components/layout/seo";
 import BulletPoint from "../components/elements/BulletPoint";
-import { H2 } from "../components/styles/TextStyles";
+import { H3 } from "../components/styles/TextStyles";
 
 import data from "../data/resume.json";
 
@@ -15,7 +15,7 @@ function ResumePage() {
       <HeroSection title="Résumé" description="My life until now!" />
       <Resume>
         <ResumeSection>
-          <H2>🎓 Education</H2>
+          <H3>🎓 Education</H3>
           {data.resume.education.map((item) => {
             return (
               <BulletPoint
@@ -32,7 +32,7 @@ function ResumePage() {
         </ResumeSection>
 
         <ResumeSection>
-          <H2>🏆 Awards and Scholarships</H2>
+          <H3>🏆 Awards and Scholarships</H3>
           {data.resume.awards.map((item) => {
             return (
               <BulletPoint
@@ -45,7 +45,7 @@ function ResumePage() {
         </ResumeSection>
 
         <ResumeSection>
-          <H2>🔨 Work Experience</H2>
+          <H3>🔨 Work Experience</H3>
           {data.resume.experience.map((item) => {
             return (
               <BulletPoint
@@ -58,14 +58,14 @@ function ResumePage() {
         </ResumeSection>
 
         <ResumeSection>
-          <H2>✨ Skills</H2>
+          <H3>✨ Skills</H3>
           {data.resume.skills.map((item) => {
             return <BulletPoint title={item.title} text={item.text} />;
           })}
         </ResumeSection>
 
         <ResumeSection>
-          <H2>👥 Voluntary Engagement</H2>
+          <H3>👥 Voluntary Engagement</H3>
           {data.resume.voluntary.map((item) => {
             return (
               <BulletPoint
@@ -119,7 +119,7 @@ const ResumeSection = styled.div`
     pointer-events: none;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 650px) {
     width: 75%;
   }
 `;

@@ -10,15 +10,15 @@ export default function WaveBackground() {
 }
 
 const Wrapper = styled.div`
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 340px;
+  z-index: 1;
 `;
 
 const Wave = styled.img`
-  height: 340px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-
   @media (prefers-color-scheme: dark) {
     content: url("/images/backgrounds/waves-dark.svg");
   }
