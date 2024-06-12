@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BodyMain, MediumText, H4 } from "../styles/TextStyles";
-import { themes } from "../styles/ColorStyles"
+import { MediumText, H4 } from "../styles/TextStyles";
 
 export default function BulletPoint(props) {
   const formatText = (text) => {
@@ -63,18 +62,6 @@ const Time = styled.div`
   color: #61ad71;
   font-size: 15px;
   font-weight: 380;
-`;
-
-const Heading = styled.div`
-  color: black;
-  font-size: 20px;
-  font-weight: 650;
-
-  @media (max-width: 550px) {
-    color: black;
-    font-size: 17px;
-    font-weight: 600;
-  }
 `;
 
 const Wrapper = styled.div`
