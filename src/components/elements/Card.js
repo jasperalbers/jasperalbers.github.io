@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { H3, H4, MediumText } from "../styles/TextStyles";
+import { themes } from "../styles/ColorStyles"
 
 function CardPortfolio(props) {
   return (
@@ -64,8 +65,9 @@ export const WrapperH = styled(Wrapper)`
 const Card = styled.div`
   width: 300px;
   height: 225px;
+  background: ${themes.light.card.backgroundColor};
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: ${themes.light.card.boxShadow};
   display: grid;
   align-items: center;
   justify-items: center;
@@ -78,6 +80,11 @@ const Card = styled.div`
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
     z-index: 10;
   }
+  @media (prefers-color-scheme: dark) {
+    background: ${themes.dark.card.backgroundColor};
+    box-shadow: ${themes.dark.card.boxShadow};
+  }
+
 `;
 
 const CardL = styled(Card)`
@@ -95,6 +102,7 @@ const CardL = styled(Card)`
     width: 250px;
     height: 200px;
   }
+
 `;
 
 const CardH = styled(Card)`

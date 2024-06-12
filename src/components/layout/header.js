@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
+import { themes } from "../styles/ColorStyles"
 
 export default function Header() {
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -99,6 +100,12 @@ const HeaderButton = styled.button`
   @media (max-width: 640px) {
     font-size: 16px;
     padding: 8px 16px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: ${themes.dark.text1};
+    background: ${themes.dark.card.backgroundColor};
+    box-shadow: ${themes.dark.card.boxShadow};
   }
 
 `;

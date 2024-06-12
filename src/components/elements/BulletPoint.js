@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { MediumText, H4 } from "../styles/TextStyles";
+import { themes } from "../styles/ColorStyles"
 
 export default function BulletPoint(props) {
   const formatText = (text) => {
@@ -67,6 +68,7 @@ const Time = styled.div`
 const Wrapper = styled.div`
 p .bold-text {
     font-weight: bold;
+  }
 `;
 
 const Li = styled.li`

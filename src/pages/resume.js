@@ -6,6 +6,7 @@ import Layout from "../components/layout/layout";
 import Seo from "../components/layout/seo";
 import BulletPoint from "../components/elements/BulletPoint";
 import { H3 } from "../components/styles/TextStyles";
+import { themes } from "../components/styles/ColorStyles"
 
 import data from "../data/resume.json";
 
@@ -123,5 +124,10 @@ const ResumeSection = styled.div`
 
   @media (max-width: 650px) {
     width: 75%;
+  }
+
+    @media (prefers-color-scheme: dark) {
+    background: ${themes.dark.card.backgroundColor};
+    box-shadow: ${themes.dark.card.boxShadow};
   }
 `;
