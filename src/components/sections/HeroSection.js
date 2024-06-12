@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { H1, H2, BodyMain } from "../styles/TextStyles";
 import WaveBackground from "../backgrounds/WaveBackground";
+import { MoveUp } from "../animations/MoveUp"
 
 export default function HeroSection(props) {
   return (
@@ -24,17 +25,7 @@ const Wrapper = styled.div`
   overflow: hidden;
 `;
 
-const animation = keyframes`
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-`;
 
 export const TextWrapper = styled.div`
   margin: auto;
@@ -50,7 +41,7 @@ export const TextWrapper = styled.div`
 
   > * {
     opacity: 0;
-    animation: ${animation} 3s 0.1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation: ${MoveUp} 3s 0.1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   }
 
   @media (max-width: 500px) {

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { H3, H4, MediumText } from "../styles/TextStyles";
 import { themes } from "../styles/ColorStyles"
+import { MoveUp } from "../animations/MoveUp"
 
 function CardPortfolio(props) {
   return (
@@ -40,6 +41,11 @@ const Wrapper = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
   justify-items: center;
+
+    > * {
+    opacity: 0;
+    animation: ${MoveUp} 3s 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
 `;
 
 export const WrapperL = styled(Wrapper)`

@@ -19,8 +19,8 @@ const Wrapper = styled.div`
 `;
 
 const Wave = styled.img`
-  filter: blur(6px);
+  filter: blur(5px);
   @media (prefers-color-scheme: dark) {
-    content: url("/images/backgrounds/waves-dark.svg");
+    content: url("/images/backgrounds/waves-dark-green.svg");
   }
 `;

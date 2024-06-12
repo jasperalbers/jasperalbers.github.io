@@ -6,6 +6,7 @@ import HeroSection, {
   SocialMediaItem,
 } from "../components/sections/HeroSection";
 import { BodyMain } from "../components/styles/TextStyles";
+import { MoveUp } from "../components/animations/MoveUp"
 
 import socialmedia from "../data/socialmedia";
 import Layout from "../components/layout/layout";
@@ -41,4 +42,8 @@ export default IndexPage;
 
 const ContentWrapper = styled(TextWrapper)`
   padding: 0 50px;
+  > * {
+    opacity: 0;
+    animation: ${MoveUp} 3s 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
 `;

@@ -7,6 +7,7 @@ import Seo from "../components/layout/seo";
 import BulletPoint from "../components/elements/BulletPoint";
 import { H3 } from "../components/styles/TextStyles";
 import { themes } from "../components/styles/ColorStyles"
+import { MoveUp } from "../components/animations/MoveUp"
 
 import data from "../data/resume.json";
 
@@ -93,6 +94,11 @@ const Resume = styled.div`
   margin: 50px 0;
   gap: 30px;
   max-height: 3000px;
+
+  > * {
+    opacity: 0;
+    animation: ${MoveUp} 3s 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
 
   @media (max-width: 1250px) {
     max-height: 100%;
