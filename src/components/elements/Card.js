@@ -15,7 +15,7 @@ function CardPortfolio(props) {
         <H3>{props.title}</H3>
         <CardImage src={`/images/portfolio/${props.image}`} alt={props.title} />
         <MediumText>{props.text}</MediumText>
-        <Tag><FontAwesomeIcon icon={faTag} color="white"/> test</Tag>
+        <Tag><FontAwesomeIcon icon={faTag} color="white"/> {props.tag}</Tag>
       </CardL>
     </a>
   );

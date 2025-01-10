@@ -23,6 +23,7 @@ function PortfolioPage() {
               image={item.image}
               link={item.link}
               text={item.text}
+              tag={item.tag}
             />
           );
         })}
