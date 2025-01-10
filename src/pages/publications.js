@@ -12,8 +12,7 @@ function PublicationsPage() {
     <Layout>
       <HeroSection
         title="Publications"
-        description="Check out my publications below. All articles are freely available
-            and either peer-reviewed or under review."
+        description="Check out my publications below. All articles are either peer-reviewed or currently under review."
       />
       <WrapperH>
         {data.publications.map((paper) => {

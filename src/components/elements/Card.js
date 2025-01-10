@@ -1,8 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { H3, H4, MediumText } from "../styles/TextStyles";
-import { themes } from "../styles/ColorStyles"
-import { MoveUp } from "../animations/MoveUp"
+import { themes } from "../styles/ColorStyles";
+import { MoveUp } from "../animations/MoveUp";
+
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTag } from '@fortawesome/free-solid-svg-icons'
 
 function CardPortfolio(props) {
   return (
@@ -11,6 +15,7 @@ function CardPortfolio(props) {
         <H3>{props.title}</H3>
         <CardImage src={`/images/portfolio/${props.image}`} alt={props.title} />
         <MediumText>{props.text}</MediumText>
+        <Tag><FontAwesomeIcon icon={faTag} color="white"/> test</Tag>
       </CardL>
     </a>
   );
@@ -35,6 +40,17 @@ function CardPublication(props) {
 
 export { CardPortfolio, CardPublication };
 
+const Tag = styled.div`
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  background: teal;
+  position: absolute;
+  right: 20px; /* Adjust padding as needed */
+  bottom: 20px; /* Adjust position as needed */
+  padding: 3px 10px;
+`;
+
 const Wrapper = styled.div`
   margin: 50px 40px 100px;
   display: grid;
@@ -42,7 +58,7 @@ const Wrapper = styled.div`
   grid-gap: 40px;
   justify-items: center;
 
-    > * {
+  > * {
     opacity: 0;
     animation: ${MoveUp} 3s 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   }
@@ -90,7 +106,6 @@ const Card = styled.div`
     background: ${themes.dark.card.backgroundColor};
     box-shadow: ${themes.dark.card.boxShadow};
   }
-
 `;
 
 const CardL = styled(Card)`
@@ -108,7 +123,6 @@ const CardL = styled(Card)`
     width: 250px;
     height: 200px;
   }
-
 `;
 
 const CardH = styled(Card)`
@@ -130,7 +144,6 @@ const CardH = styled(Card)`
     gap: 20px;
     grid-template-rows: 20% 50% 10%;
   }
-
 `;
 
 const CardImage = styled.img`
