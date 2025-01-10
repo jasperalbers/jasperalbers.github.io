@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[976],{9417:function(t,a,e){e.d(a,{LEN:function(){return c}});var c={prefix:"fas",iconName:"tag",icon:[448,512,[127991],"f02b","M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"]}}}]);
+//# sourceMappingURL=c16184b3-6784f5f5b01d437e0964.js.map
